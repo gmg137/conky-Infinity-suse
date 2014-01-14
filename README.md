@@ -1,7 +1,10 @@
 #conky-Infinity-suse
 >专为openSUSE修改的Conky Infinity主题。
 
-#安装说明
+###效果图
+![效果图](http://git.oschina.net/uploads/images/2014/0114/222957_584fdd6b_24256.png)
+
+##安装说明
 
 一、安装：conky
 ------------     
