@@ -1,0 +1,1 @@
+#conky-Infinity-suse
