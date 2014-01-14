@@ -4,23 +4,29 @@
 #安装说明
 
 #一、安装：conky
-     
+------------     
 >    $sudo zypper in conky conky-cairo conky-imlib2
 
-#二、将压缩包内的文件夹 conky 和文件 conkyrc 改名为 .conky 和 .conkyrc 然后将它们复制到自己的主目录下。
+#二、修改文件名
+-----------
+>将压缩包内的文件夹 conky 和文件 conkyrc 改名为 .conky 和 .conkyrc 然后将它们复制到自己的主目录下。
 
-#三、修改 .conkyrc 文件中第95、96、98行中的无线网卡的名称为你的网卡名。
+#三、修改网卡名
+----------
+>在 .conkyrc 文件中第95、96、98行中的无线网卡的名称为你的网卡名。
    
 >    *注：我的网卡名是 wlp9s0，批量替换为你的网卡名就行了。
 
-#四、修改.conkyrc文件中第100行中的天气预报的地区编码。
+#四、修改天气预报
+----------
+>在.conkyrc文件中第100行中的天气预报的地区编码。
 
 >将 “http://weather.yahooapis.com/forecastrss?w=2172739” 中的2172739替换为你的地区编号。
 
->查询地区编码可到 http://weather.yahoo.com/ 输入你的城市名，如 beijing ,然后查看URL中的编号。
+>*查询地区编码可到 http://weather.yahoo.com/ 输入你的城市名，如 beijing ,然后查看URL中的编号。
 
 #五、启动
-   
+----------   
    >1、测试启动
    
       $conky -d -c ~/.conkyrc &
@@ -40,5 +46,5 @@
       conky -d -c ~/.conkyrc &
 
 #六、修改默认天气图标（可选）
-    
+------------    
 >在conky文件夹下，提供了三套天气皮肤，将自己喜欢的天气皮肤文件夹名修改为 weather 即可。
