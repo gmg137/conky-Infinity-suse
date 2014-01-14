@@ -1,0 +1,51 @@
+码	描述
+0	龙卷风                tornado
+1	热带风暴              tropical storm
+2	飓风	              hurricane
+3	强雷暴                severe thunderstorms
+4	雷暴                  thunderstorms
+5	雨加雪                mixed rain and snow
+6	雨转雨夹雪            mixed rain and sleet
+7	雪转雨夹雪            mixed snow and sleet
+8	冻毛毛雨              freezing drizzle
+9	毛毛雨                drizzle
+10	冻雨                  freezing rain
+11	阵雨                  showers
+12	阵雨                  showers
+13	雪转小雪              snow flurries
+14	轻微阵雪              light snow showers
+15	吹雪                  blowing snow
+16	雪                    snow
+17	冰雹                  hail
+18	雨夹雪（雹）          sleet
+19	尘                    dust
+20	雰                    foggy
+21	霾                    haze
+22	烟                    smoky
+23	坏天气的              blustery
+24	有风                  windy
+25	冷                    cold
+26	阴天                  cloudy
+27	阴天（夜）            mostly cloudy (night)
+28	阴天（日）            mostly cloudy (day)
+29	多云（夜）            partly cloudy (night)
+30	多云（日）            partly cloudy (day)
+31	晴朗（夜）            clear (night)
+32	晴朗                  sunny
+33	好转（夜）            fair (night)
+34	好转（日）            fair (day)
+35	大雨加冰雹            mixed rain and hail
+36	热                    hot
+37	局部雷暴              isolated thunderstorms
+38	零星雷雨              scattered thunderstorms
+39	零星雷雨              scattered thunderstorms
+40	零星阵雨              scattered showers
+41	大雪                  heavy snow
+42	零星阵雪              scattered snow showers
+43	大雪                  heavy snow
+44	多云                  partly cloudy
+45	雷阵雨                thundershowers
+46	阵雪                  snow showers
+47	局部雷阵雨            isolated thundershowers
+3200	不可用                not available
+	

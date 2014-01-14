@@ -1,0 +1,111 @@
+###########################################################################
+#    Conky Theme : Infinity-suse                                          #
+#    Created by  : gmg137                                                 #
+#    Version     : 1.0   		                                  #
+#    License     : GPL V2                                                 #
+#    Modified by : http://git.oschina.net/gmg137/conky-Infinity-suse/     #
+###########################################################################
+
+
+# Conky settings #
+background yes
+update_interval 1
+
+cpu_avg_samples 2
+net_avg_samples 2
+
+override_utf8_locale yes
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 2048
+imlib_cache_size 2048
+
+temperature_unit celsius
+
+# Window specifications #
+
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+
+border_inner_margin 0
+border_outer_margin 0
+
+## This Resolution is set according to the sreen resolution of 1366x768 
+## Adjust Accoring to yours
+
+minimum_size 800 560
+maximum_width 1366
+
+alignment tr
+gap_x 10
+gap_y 55
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftfont caviar dreams:size=8
+xftalpha 0.5
+
+uppercase no
+
+temperature_unit celsius
+
+
+default_color FFFFFF
+
+# Lua Load  #
+lua_load ~/.conky/.lua/scripts/haunted.lua
+lua_draw_hook_pre clock_rings
+
+## Adjust these fields according to the your screen size i have modded them for 1366X768
+
+TEXT
+${offset 860}${color EAEAEA}${font wqy-microhei Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${voffset 10}${color FFA300}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 124}${font GE Inspira:pixelsize=58}${offset -1010}${time %A}${font}
+${offset 866}${voffset -100}${font Ubuntu:pixelsize=13}${color FFA300}HD ${offset 9}$color${fs_free /} / ${fs_size /}${offset 30}${color FFA300}RAM ${offset 9}$color$mem / $memmax${offset 30}${color FFA300}CPU ${offset 9}$color${cpu cpu0}%
+${voffset 8}${offset 270}${color 2c2c2c}${hr 4}
+${image ~/.conky/rev-suse.png -n}
+
+${offset 130}${voffset 228}${color ffffff}${font Santana:size=9:style=Bold}root : ${font Santana:size=9}${fs_used /}/${fs_size /}
+${offset 130}${voffset 10}${color ffffff}${font Santana:size=9:style=Bold}home: ${font Santana:size=9}${fs_used /home}/${fs_size /home}$font
+${offset 120}${voffset 12}${color ffffff}${font Santana:size=9:style=Bold}swap: ${font Santana:size=9} ${swap} / ${swapfree}$font
+${offset 570}${voffset -110} ${color EAEAEA}Linux ${kernel} kernel
+${offset 570}${voffset 5} Uptime :${uptime}
+${offset 828}${voffset -139}${color ffffff}${font Santana:size=12:style=Bold}${exec whoami}
+${offset 828}${voffset 0}${color ffffff}${font Santana:size=9}CPU最高： -PID-    CPU%
+${offset 828}${voffset 0}${color red}${font Santana:size=9}${top name 1} ${top pid 1}    ${top cpu 1}${color}
+${offset 828}${voffset 0}${color ffffff}${font Santana:size=9}$color2${top name 2} ${top pid 2}    ${top cpu 2}
+${offset 828}${voffset 0}${color ffffff}${font Santana:size=9}${top name 3} ${top pid 3}    ${top cpu 3}
+
+${offset 828}${voffset 0}${color ffffff}${font Santana:size=9}$color2内存最高：  -PID-      MEM%
+${offset 828}${voffset 0}${color red}${font Santana:size=9}${top_mem name 1} ${top_mem pid 1}    ${top_mem mem 1}${color}
+${offset 828}${voffset 0}${color ffffff}${font Santana:size=9}$color2${top_mem name 2} ${top_mem pid 2}    ${top_mem mem 2}
+${offset 828}${voffset 0}${color ffffff}${font Santana:size=9}${top_mem name 3} ${top_mem pid 3}    ${top_mem mem 3}
+
+
+${offset 705}${voffset 30}${color ffffff}${font Santana:size=9}IP Address :${addr wlp9s0}
+${offset 705}${voffset 10}${color ffffff}${font Santana:size=9}Down :${downspeed wlp9s0} k/s ${offset 8}Up:${upspeed wlp9s0} k/s
+${offset 705}${voffset 10}${color ffffff}${font Santana:size=9}Speed Graph :
+${offset 705}${voffset -10}${color ffffff}${font Santana:size=9}${color #000000}${downspeedgraph wlp9s0 32,150 000000 ffffff} ${color #000000}${upspeedgraph wlp9s0 32,150 000000 ffffff}
+
+${execi 300 curl -s "http://weather.yahooapis.com/forecastrss?w=2172739&u=c" -o ~/.cache/weather.xml}${offset 310}${voffset -600}${color ffffff}${font Open Sans Light:size=15}${execi 300 grep "yweather:location" ~/.cache/weather.xml | grep -o "city=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}
+${offset 380}${voffset 10}${color ffffff}${font Open Sans Light:size=40}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}°
+${execi 300 cp -f ~/.conky/weather/$(grep "yweather:condition" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*").png ~/.cache/weather.png}${image ~/.cache/weather.png -p 310,45 -s 60x60}
+${offset 310}${voffset -115}${color ffffff}${font Open Sans Light:size=12}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "text=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | tr '[a-z]' '[A-Z]'}
+${image ~/.conky/weather/wind.png -p 366,127 -s 15x15}${image ~/.conky/weather/humidity.png -p 310,127 -s 15x15}
+${offset 330}${voffset -22}${color ffffff}${font Open Sans Light:size=10}${execi 300 grep "yweather:atmosphere" ~/.cache/weather.xml | grep -o "humidity=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}%
+${offset 388}${voffset -18}${color ffffff}${font Open Sans Light:size=10}${execi 300 grep "yweather:wind" ~/.cache/weather.xml | grep -o "speed=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}${execi 300 grep "yweather:units" ~/.cache/weather.xml | grep -o "speed=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}
+${goto 500}${voffset -95}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==1' | tr '[a-z]' '[A-Z]'}${goto 555}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2' | tr '[a-z]' '[A-Z]'}${goto 610}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3' | tr '[a-z]' '[A-Z]'}${goto 665}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4' | tr '[a-z]' '[A-Z]'}${goto 720}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5' | tr '[a-z]' '[A-Z]'}
+${execi 300 cp -f ~/.conky/weather/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==1').png ~/.cache/weather-1.png}${image ~/.cache/weather-1.png -p 500,73 -s 30x30}${execi 300 cp -f ~/.conky/weather/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2').png ~/.cache/weather-2.png}${image ~/.cache/weather-2.png -p 555,73 -s 30x30}${execi 300 cp -f ~/.conky/weather/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3').png ~/.cache/weather-3.png}${image ~/.cache/weather-3.png -p 610,73 -s 30x30}${execi 300 cp -f ~/.conky/weather/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4').png ~/.cache/weather-4.png}${image ~/.cache/weather-4.png -p 665,73 -s 30x30}${execi 300 cp -f ~/.conky/weather/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5').png ~/.cache/weather-5.png}${image ~/.cache/weather-5.png -p 720,73 -s 30x30}
+${goto 505}${voffset 21}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==1'}°${goto 560}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2'}°${goto 615}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3'}°${goto 670}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4'}°${goto 725}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5'}°
+${goto 505}${voffset 0}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==1'}°${goto 560}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2'}°${goto 615}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3'}°${goto 670}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4'}°${goto 725}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5'}°
+
