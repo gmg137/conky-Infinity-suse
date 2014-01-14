@@ -1,5 +1,5 @@
 #conky-Infinity-suse
-专为openSUSE修改的Conky Infinity主题。
+>专为openSUSE修改的Conky Infinity主题。
 
 #安装说明
 
@@ -11,11 +11,11 @@
 
 >三、修改.conkyrc文件中第95、96、98行中的无线网卡的名称为你的网卡名。
    
-     >注：我的网卡名是wlp9s0，批量替换为你的网卡名就行了。
+>    注：我的网卡名是wlp9s0，批量替换为你的网卡名就行了。
 
 >四、修改.conkyrc文件中第100行中的天气预报的地区编码。
-     >将 “http://weather.yahooapis.com/forecastrss?w=2172739” 中的2172739替换为你的地区编号。
-     >查询地区编码可到 http://weather.yahoo.com/ 输入你的城市名，如 beijing ,然后查看URL中的编号。
+>    将 “http://weather.yahooapis.com/forecastrss?w=2172739” 中的2172739替换为你的地区编号。
+>    查询地区编码可到 http://weather.yahoo.com/ 输入你的城市名，如 beijing ,然后查看URL中的编号。
 
 >五、启动
    
