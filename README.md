@@ -21,11 +21,11 @@
       $conky -d -c ~/.conkyrc &
 
    2、随桌面自动启动
-      <1>GNOME 桌面
+      [1]GNOME 桌面
          在终端执行输入下面的命令,然后在调出的启动管理程序中选择[添加],[名称]可以随意填，[命令]选项中填：conky -d -q
          $gnome-session-properties
 
-      <2>KDE 桌面
+      [2]KDE 桌面
          修改~/.bash_profile文件，在里边加入下面的命令即可。如果没有这个文件就自己新建一个。
          conky -d -c ~/.conkyrc &
 
