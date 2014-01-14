@@ -4,8 +4,7 @@
 #安装说明
 
 >一、安装：conky
-
-    $sudo zypper in conky conky-cairo conky-imlib2
+     $sudo zypper in conky conky-cairo conky-imlib2
 
 >二、将压缩包内的文件夹conky和文件conkyrc改名为.conky和.conkyrc然后将它们复制到自己的主目录下。
 
