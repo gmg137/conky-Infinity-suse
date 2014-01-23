@@ -1,7 +1,7 @@
 ###########################################################################
 #    Conky Theme : Infinity-suse                                          #
 #    Created by  : gmg137                                                 #
-#    Version     : 1.0   		                                  #
+#    Version     : 1.1   		           		                          #
 #    License     : GPL V2                                                 #
 #    Modified by : http://git.oschina.net/gmg137/conky-Infinity-suse/     #
 ###########################################################################
@@ -53,7 +53,7 @@ draw_graph_borders no
 
 # Text settings #
 use_xft yes
-xftfont caviar dreams:size=8
+xftfont wqy-microhei:size=9
 xftalpha 0.5
 
 uppercase no
@@ -70,37 +70,37 @@ lua_draw_hook_pre clock_rings
 ## Adjust these fields according to the your screen size i have modded them for 1366X768
 
 TEXT
-${offset 860}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${voffset 10}${color FFA300}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 124}${font GE Inspira:pixelsize=58}${offset -1010}${time %A}${font}
-${offset 866}${voffset -100}${font Ubuntu:pixelsize=13}${color FFA300}HD ${offset 9}$color${fs_free /} / ${fs_size /}${offset 30}${color FFA300}RAM ${offset 9}$color$mem / $memmax${offset 30}${color FFA300}CPU ${offset 9}$color${cpu cpu0}%
+${offset 860}${color EAEAEA}${font wqy-microhei:pixelsize=120}${time %H:%M}${font}${voffset -84}${voffset 10}${color FFA300}${font wqy-microhei:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font wqy-microhei:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 124}${font wqy-microhei:pixelsize=58}${offset -1010}${time %A}${font}
+${offset 866}${voffset -100}${font wqy-microhei:pixelsize=13}${color FFA300}HD ${offset 9}$color${fs_free /} / ${fs_size /}${offset 30}${color FFA300}RAM ${offset 9}$color$mem / $memmax${offset 30}${color FFA300}CPU ${offset 9}$color${cpu cpu0}%
 ${voffset 8}${offset 270}${color 2c2c2c}${hr 4}
 ${image ~/.conky/rev-suse.png -n}
 
-${offset 130}${voffset 228}${color ffffff}${font Santana:size=9:style=Bold}root : ${font Santana:size=9}${fs_used /}/${fs_size /}
-${offset 130}${voffset 10}${color ffffff}${font Santana:size=9:style=Bold}home: ${font Santana:size=9}${fs_used /home}/${fs_size /home}$font
-${offset 120}${voffset 12}${color ffffff}${font Santana:size=9:style=Bold}swap: ${font Santana:size=9} ${swap} / ${swapfree}$font
+${offset 130}${voffset 228}${color ffffff}${font wqy-microhei:size=9:style=Bold}root : ${font wqy-microhei:size=9}${fs_used /}/${fs_size /}
+${offset 130}${voffset 10}${color ffffff}${font wqy-microhei:size=9:style=Bold}home: ${font wqy-microhei:size=9}${fs_used /home}/${fs_size /home}$font
+${offset 120}${voffset 12}${color ffffff}${font wqy-microhei:size=9:style=Bold}swap: ${font wqy-microhei:size=9} ${swap} / ${swapfree}$font
 ${offset 570}${voffset -110} ${color EAEAEA}Linux ${kernel} kernel
 ${offset 570}${voffset 5} Uptime :${uptime}
-${offset 828}${voffset -139}${color ffffff}${font Santana:size=12:style=Bold}${exec whoami}
-${offset 828}${voffset 0}${color ffffff}${font Santana:size=9}CPU最高： -PID-    CPU%
-${offset 828}${voffset 0}${color red}${font Santana:size=9}${top name 1} ${top pid 1}    ${top cpu 1}${color}
-${offset 828}${voffset 0}${color ffffff}${font Santana:size=9}$color2${top name 2} ${top pid 2}    ${top cpu 2}
-${offset 828}${voffset 0}${color ffffff}${font Santana:size=9}${top name 3} ${top pid 3}    ${top cpu 3}
+${offset 828}${voffset -139}${color ffffff}${font wqy-microhei:size=12:style=Bold}${exec whoami}
+${offset 828}${voffset 0}${color ffffff}${font wqy-microhei:size=9}CPU最高： -PID-    CPU%
+${offset 828}${voffset 0}${color red}${font wqy-microhei:size=9}${top name 1} ${top pid 1}    ${top cpu 1}${color}
+${offset 828}${voffset 0}${color ffffff}${font wqy-microhei:size=9}$color2${top name 2} ${top pid 2}    ${top cpu 2}
+${offset 828}${voffset 0}${color ffffff}${font wqy-microhei:size=9}${top name 3} ${top pid 3}    ${top cpu 3}
 
-${offset 828}${voffset 0}${color ffffff}${font Santana:size=9}$color2内存最高：  -PID-      MEM%
-${offset 828}${voffset 0}${color red}${font Santana:size=9}${top_mem name 1} ${top_mem pid 1}    ${top_mem mem 1}${color}
-${offset 828}${voffset 0}${color ffffff}${font Santana:size=9}$color2${top_mem name 2} ${top_mem pid 2}    ${top_mem mem 2}
-${offset 828}${voffset 0}${color ffffff}${font Santana:size=9}${top_mem name 3} ${top_mem pid 3}    ${top_mem mem 3}
+${offset 828}${voffset 0}${color ffffff}${font wqy-microhei:size=9}$color2内存最高：  -PID-      MEM%
+${offset 828}${voffset 0}${color red}${font wqy-microhei:size=9}${top_mem name 1} ${top_mem pid 1}    ${top_mem mem 1}${color}
+${offset 828}${voffset 0}${color ffffff}${font wqy-microhei:size=9}$color2${top_mem name 2} ${top_mem pid 2}    ${top_mem mem 2}
+${offset 828}${voffset 0}${color ffffff}${font wqy-microhei:size=9}${top_mem name 3} ${top_mem pid 3}    ${top_mem mem 3}
 
 
-${offset 705}${voffset 30}${color ffffff}${font Santana:size=9}IP Address :${addr wlp9s0}
-${offset 705}${voffset 10}${color ffffff}${font Santana:size=9}Down :${downspeed wlp9s0} k/s ${offset 8}Up:${upspeed wlp9s0} k/s
-${offset 705}${voffset 10}${color ffffff}${font Santana:size=9}Speed Graph :
-${offset 705}${voffset -10}${color ffffff}${font Santana:size=9}${color #000000}${downspeedgraph wlp9s0 32,150 000000 ffffff} ${color #000000}${upspeedgraph wlp9s0 32,150 000000 ffffff}
+${offset 705}${voffset 30}${color ffffff}${font wqy-microhei:size=9}IP Address :${addr wlp9s0}
+${offset 705}${voffset 10}${color ffffff}${font wqy-microhei:size=9}Down :${downspeed wlp9s0} k/s ${offset 8}Up:${upspeed wlp9s0} k/s
+${offset 705}${voffset 10}${color ffffff}${font wqy-microhei:size=9}Speed Graph :
+${offset 705}${voffset -10}${color ffffff}${font wqy-microhei:size=9}${color #000000}${downspeedgraph wlp9s0 32,150 000000 ffffff} ${color #000000}${upspeedgraph wlp9s0 32,150 000000 ffffff}
 
-${execi 300 curl -s "http://weather.yahooapis.com/forecastrss?w=2172739&u=c" -o ~/.cache/weather.xml}${offset 310}${voffset -600}${color ffffff}${font Open Sans Light:size=15}${execi 300 grep "yweather:location" ~/.cache/weather.xml | grep -o "city=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}
-${offset 380}${voffset 10}${color ffffff}${font Open Sans Light:size=40}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}°
+${execi 300 curl -s "http://weather.yahooapis.com/forecastrss?w=2172739&u=c" -o ~/.cache/weather.xml}${offset 310}${voffset -585}${color ffffff}${font Open Sans Light:size=15}${execi 300 grep "yweather:location" ~/.cache/weather.xml | grep -o "city=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}
+${offset 380}${voffset 0}${color ffffff}${font Open Sans Light:size=40}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}°
 ${execi 300 cp -f ~/.conky/weather/$(grep "yweather:condition" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*").png ~/.cache/weather.png}${image ~/.cache/weather.png -p 310,45 -s 60x60}
-${offset 310}${voffset -115}${color ffffff}${font Open Sans Light:size=12}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "text=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | tr '[a-z]' '[A-Z]'}
+${offset 310}${voffset -120}${color ffffff}${font Open Sans Light:size=12}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "text=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | tr '[a-z]' '[A-Z]'}
 ${image ~/.conky/weather/wind.png -p 366,127 -s 15x15}${image ~/.conky/weather/humidity.png -p 310,127 -s 15x15}
 ${offset 330}${voffset -22}${color ffffff}${font Open Sans Light:size=10}${execi 300 grep "yweather:atmosphere" ~/.cache/weather.xml | grep -o "humidity=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}%
 ${offset 388}${voffset -18}${color ffffff}${font Open Sans Light:size=10}${execi 300 grep "yweather:wind" ~/.cache/weather.xml | grep -o "speed=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}${execi 300 grep "yweather:units" ~/.cache/weather.xml | grep -o "speed=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}
