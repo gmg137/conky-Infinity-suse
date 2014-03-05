@@ -12,9 +12,11 @@
 #快捷安装
 >依次执行下面3条命令即可（已安装conky）
 
-`wget http://t.cn/8F5HzMM -O conky.tar.gz && tar xzf conky.tar.gz`
-`cp -r conky-I*/conky ~/.conky && cp conky-I*/conkyrc ~/.conkyrc && rm -rf conky*`
-`conky -d -c ~/.conkyrc && echo "conky -d" >> ~/.bash_profile`
+    wget http://t.cn/8F5HzMM -O conky.tar.gz && tar xzf conky.tar.gz
+    
+    cp -r conky-I*/conky ~/.conky && cp conky-I*/conkyrc ~/.conkyrc && rm -rf conky*
+    
+    conky -d -c ~/.conkyrc && grep "conky -d" ~/.bash_profile || echo "conky -d" >> ~/.bash_profile
 
 --------------
 
@@ -22,7 +24,7 @@
 
 一、安装：conky
 ------------     
-`$sudo zypper in conky conky-cairo conky-imlib2`
+    $sudo zypper in conky conky-cairo conky-imlib2
 
 二、修改文件名
 -----------
@@ -46,7 +48,7 @@
 ----------   
    >1、测试启动
    
-      `$conky -d -c ~/.conkyrc &`
+      $conky -d -c ~/.conkyrc &
 
    >2、随桌面自动启动
       
@@ -54,13 +56,13 @@
       
 >在终端执行输入下面的命令,然后在调出的启动管理程序中选择 [添加], [名称] 可以随意填，[命令] 选项中填：conky -d -q
       
-      $`gnome-session-properties`
+      $gnome-session-properties
       
 >KDE 桌面:
       
 >修改~/.bash_profile文件，在里边加入下面的命令即可。如果没有这个文件就自己新建一个。
       
-      `conky -d -c ~/.conkyrc &`
+      conky -d -c ~/.conkyrc &
 
 六、修改默认天气图标（可选）
 ------------    
